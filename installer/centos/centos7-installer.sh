@@ -76,15 +76,15 @@ echo 'export PATH=$PATH:/usr/lib64/openmpi/bin:/usr/local/nrn/$CPU/bin' | sudo t
 
 # qt, pyqt, and supporting packages - needed for GUI
 # SIP unforutnately not available as a wheel for Python 3.4, so have to compile
-wget https://sourceforge.net/projects/pyqt/files/sip/sip-4.19.2/sip-4.19.2.tar.gz
-tar -zxf sip-4.19.2.tar.gz
-cd sip-4.19.2
+wget https://sourceforge.net/projects/pyqt/files/sip/sip-4.19.13/sip-4.19.13.tar.gz
+tar -zxf sip-4.19.13.tar.gz
+cd sip-4.19.13
 sudo python3 configure.py
 make -j4
 sudo make install -j4
 cd ..
-sudo rm -rf sip-4.19.2
-sudo rm -f sip-4.19.2.tar.gz
+sudo rm -rf sip-4.19.13
+sudo rm -f sip-4.19.13.tar.gz
 
 sudo yum -y install qt-devel
 sudo yum -y install qt5-qtbase
